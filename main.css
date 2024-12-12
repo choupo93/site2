@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #1e40af;
+    --secondary-color: #0a0f1a;
+    --text-color: #f1f5f9;
+    --background-color: #000000;
+    --card-background: rgba(10, 15, 26, 0.95);
+    --card-hover: rgba(20, 30, 45, 0.98);
+    --accent-color: #2563eb;
+    --nav-background: rgba(5, 8, 15, 0.98);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(29, 78, 216, 0.05) 0%, transparent 40%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    border-radius: 2px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+    letter-spacing: -1px;
+}
+
+.contact {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    text-align: center;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.contact a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.contact a:hover {
+    color: #60a5fa;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        padding: 4rem 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem; /* Réduit la taille du titre pour les tablettes */
+        margin-bottom: 0.5rem;
+    }
+
+    .contact {
+        padding: 1rem;
+    }
+
+    .contact a {
+        font-size: 0.9rem; /* Réduit la taille du texte des liens */
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Media Query pour les petits écrans jusqu'à 480px (smartphones) */
+@media (max-width: 480px) {
+
+    body {
+        background-image: 
+            radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(29, 78, 216, 0.05) 0%, transparent 40%);
+    }
+
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    .header {
+        margin-bottom: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.8rem; /* Taille du titre plus petite sur mobile */
+        margin-bottom: 0.3rem;
+    }
+
+    .contact {
+        padding: 1rem;
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+
+    .contact a {
+        font-size: 0.85rem; /* Réduit encore plus la taille du texte sur mobile */
+        padding: 0.3rem 0.7rem;
+    }
+}

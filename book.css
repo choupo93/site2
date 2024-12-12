@@ -1,0 +1,113 @@
+.book-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.book-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover img {
+    width: 100% ;
+    display: block;
+}
+
+.book-info {
+    padding: 80px, 2px,2px,2px;
+}
+
+.book-description {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.read-button {
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 10px 20px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.read-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+
+@media (max-width: 768px) {
+
+    .book-container {
+        max-width: 100%;
+        padding: 1rem; /* Réduit le padding sur les petits écrans */
+    }
+
+    .book-card {
+        padding: 1rem;
+        width: 100%; /* Prend toute la largeur du parent */
+    }
+
+    .book-description {
+        font-size: 1rem; /* Réduit la taille de la description */
+    }
+
+    .read-button {
+        padding: 15px 8px; /* Réduit le padding des boutons */
+        font-size: 1rem; /* Réduit la taille du texte du bouton */
+    }
+}
+
+/* Media Query pour les petits écrans (téléphones mobiles, max-width: 480px) */
+@media (max-width: 480px) {
+
+    .book-container {
+        padding: 0.5rem; /* Réduit le padding */
+    }
+
+    .book-card {
+        padding: 0.8rem; /* Réduit le padding de la carte */
+    }
+
+
+    .book-description {
+        font-size: 13px; /* Réduit la taille de la description sur mobile */
+        line-height: 1.5; /* Augmente légèrement la hauteur de ligne */
+    }
+
+    .read-button {
+        padding: 12px 6px; /* Réduit le padding du bouton */
+        font-size: 0.9rem; /* Réduit la taille de la police */
+        width: 100%; /* Le bouton prend toute la largeur */
+    }
+
+    .book-cover {
+        margin-bottom: 1rem; /* Réduit l'écart sous la couverture */
+    }
+}
